@@ -1,86 +1,95 @@
-# ChronoMoE
+ChronoMoE
 
-**A multi-clock mixture-of-experts architecture where routing, memory, and safety operate on different timescales.**
+A multi-clock mixture-of-experts architecture where routing, memory, and safety operate on different timescales.
 
 Experts emerge, drift, and decay under persistent pressure, enabling long-horizon coherence, adaptive arbitration, and robust reasoning without brittle guardrails.
 
----
+What is this?
 
-## What is this?
+ChronoMoE is an architectural experiment exploring how mixture-of-experts models behave when critical subsystems operate on different temporal regimes:
 
-ChronoMoE is an architectural experiment exploring how mixture-of-experts models behave when critical subsystems operate on different timescales:
+Routing deliberates rather than reacts
 
-- **Routing** deliberates rather than reacts
-- **Memory** persists and evolves across contexts
-- **Safety** arbitrates rather than vetoes
-- **Experts** drift and adapt instead of freezing
+Memory persists and evolves across contexts
+
+Safety arbitrates rather than vetoes
+
+Experts drift and adapt instead of freezing
 
 This is a testbed for understanding how temporal separation prevents collapse into reflexive behavior.
 
----
+What this is not
 
-## What This Is Not
-- Not a production-ready library (yet)
-- Not claiming AGI or consciousness (we're testing architectural hypotheses)
-- Not a jailbreak or safety bypass (safety gets more compute, not less)
-- Not optimizing for benchmarks (we're optimizing for temporal coherence)
+Not a production-ready library (yet)
 
----
+Not claiming AGI or consciousness (we are testing architectural hypotheses)
 
-## Why Apache-2.0?
+Not a jailbreak or safety bypass (safety gets more compute, not less)
 
-ChronoMoE is released under the **Apache-2.0 license** because:
+Not optimizing for benchmarks (we optimize for temporal coherence)
 
-- It provides a **clear patent grant** for work that touches control surfaces and arbitration dynamics
-- It requires **modification transparency**, ensuring that if these ideas spread, they remain legible
-- It reflects the project's intent: **open enough to invite serious experimentation**, structured enough to prevent silent appropriation, and honest about the fact that architectures like this will have consequences beyond toy demos
+Why Apache-2.0?
 
-If that makes you slightly uncomfortable and curious at the same time, you're probably in the right place.
+ChronoMoE is released under the Apache-2.0 license because:
 
----
+It provides a clear patent grant for work that touches control surfaces and arbitration dynamics
 
-## What breaks if you remove the clocks?
+It requires modification transparency, ensuring that if these ideas spread, they remain legible
 
-If you collapse ChronoMoE into a single timescale, it still runs. It still answers. But coherence degrades in ways that are hard to see until you measure them:
+It reflects the project’s intent: open enough to invite serious experimentation, structured enough to prevent silent appropriation
 
-- **Routing becomes reactive** instead of deliberative
-- **Safety dominates by veto** rather than arbitration
-- **Experts freeze or thrash** instead of drifting
-- **Cheap resolutions win too often** and quietly poison long-horizon reasoning
+This architecture is not a toy.
+If that makes you slightly uncomfortable and curious, you’re probably in the right place.
 
-Nothing crashes. The system just becomes brittle.
+What breaks if you remove the clocks?
 
-ChronoMoE exists because these failures don't show up in loss curves or benchmarks. They show up **over time, under pressure**, when decisions interact with future decisions. Separating clocks is not an optimization trick... it is the minimum structure required to keep arbitration, safety, and reasoning from collapsing into the same reflex.
+If you collapse ChronoMoE into a single timescale, it still runs.
+It still answers.
+But coherence degrades in ways that are hard to see until you measure them:
 
-Example: A model asked to analyze ethical tradeoffs might route to "safety expert" 
-which returns a canned response. Loss looks fine. User gets an answer. But the 
-system never actually deliberated—it reflexively pattern-matched to the cheapest 
-safe-looking route. Over time, this becomes the dominant strategy for anything 
-remotely controversial, and nuanced reasoning atrophies.
+Routing becomes reactive instead of deliberative
 
-ChronoMoE separates routing from resolution so deliberation can happen before 
-the safety expert even activates.
+Safety dominates by veto rather than arbitration
 
----
+Experts freeze or thrash instead of drifting
 
-## Repository Status
+Cheap resolutions win too often and quietly poison long-horizon reasoning
 
-⚠️ **Experimental / Early Development**
+Nothing crashes.
+The system just becomes brittle.
 
-- Architecture design in progress
-- API unstable and subject to change
-- Not yet ready for production use
+ChronoMoE exists because these failures do not show up in loss curves or benchmarks. They show up over time, under pressure, when decisions interact with future decisions.
 
----
+Separating clocks is not an optimization trick.
+It is the minimum structure required to keep arbitration, safety, and reasoning from collapsing into the same reflex.
 
-## Getting Started
+Example
 
-*Documentation and usage examples coming soon.*
+A model asked to analyze ethical tradeoffs may route immediately to a “safety expert” that returns a canned response.
 
-If you're curious why temporal separation matters, the code is where the answers start.
+Loss looks fine.
+The user gets an answer.
 
----
+But the system never actually deliberated. It reflexively pattern-matched to the cheapest safe-looking route. Over time, this becomes the dominant strategy for anything remotely controversial, and nuanced reasoning atrophies.
 
-## License
+ChronoMoE separates routing from resolution so deliberation can occur before the safety expert even activates.
 
-Apache-2.0 — See [LICENSE](LICENSE) for details.
+Repository status
+
+⚠️ Experimental / Early Development
+
+Architecture design in progress
+
+API unstable and subject to change
+
+Not yet ready for production use
+
+Getting started
+
+Documentation and usage examples coming soon.
+
+If you’re curious why temporal separation matters, the code is where the answers start.
+
+License
+
+Apache-2.0 — see LICENSE for details.
