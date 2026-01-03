@@ -15,7 +15,7 @@ ChronoMoE is an architectural experiment exploring how mixture-of-experts models
 - **Safety** arbitrates rather than vetoes
 - **Experts** drift and adapt instead of freezing
 
-This is not a prompt trick or a wrapper around existing models. It's a testbed for understanding how temporal separation prevents collapse into reflexive behavior.
+This is a testbed for understanding how temporal separation prevents collapse into reflexive behavior.
 
 ---
 
@@ -42,7 +42,7 @@ If you collapse ChronoMoE into a single timescale, it still runs. It still answe
 
 Nothing crashes. The system just becomes brittle.
 
-ChronoMoE exists because these failures don't show up in loss curves or benchmarks. They show up **over time, under pressure**, when decisions interact with future decisions. Separating clocks is not an optimization trick—it is the minimum structure required to keep arbitration, safety, and reasoning from collapsing into the same reflex.
+ChronoMoE exists because these failures don't show up in loss curves or benchmarks. They show up **over time, under pressure**, when decisions interact with future decisions. Separating clocks is not an optimization trick... it is the minimum structure required to keep arbitration, safety, and reasoning from collapsing into the same reflex.
 
 ---
 
