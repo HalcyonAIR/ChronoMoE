@@ -19,6 +19,14 @@ This is a testbed for understanding how temporal separation prevents collapse in
 
 ---
 
+## What This Is Not
+- Not a production-ready library (yet)
+- Not claiming AGI or consciousness (we're testing architectural hypotheses)
+- Not a jailbreak or safety bypass (safety gets more compute, not less)
+- Not optimizing for benchmarks (we're optimizing for temporal coherence)
+
+---
+
 ## Why Apache-2.0?
 
 ChronoMoE is released under the **Apache-2.0 license** because:
@@ -43,6 +51,15 @@ If you collapse ChronoMoE into a single timescale, it still runs. It still answe
 Nothing crashes. The system just becomes brittle.
 
 ChronoMoE exists because these failures don't show up in loss curves or benchmarks. They show up **over time, under pressure**, when decisions interact with future decisions. Separating clocks is not an optimization trick... it is the minimum structure required to keep arbitration, safety, and reasoning from collapsing into the same reflex.
+
+Example: A model asked to analyze ethical tradeoffs might route to "safety expert" 
+which returns a canned response. Loss looks fine. User gets an answer. But the 
+system never actually deliberated—it reflexively pattern-matched to the cheapest 
+safe-looking route. Over time, this becomes the dominant strategy for anything 
+remotely controversial, and nuanced reasoning atrophies.
+
+ChronoMoE separates routing from resolution so deliberation can happen before 
+the safety expert even activates.
 
 ---
 
